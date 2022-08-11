@@ -41,12 +41,6 @@ export default function ButtonHolder({ setChartData, setSeekCount }) {
     const [diskCurrentPosition, setDiskCurrentPosition] = React.useState("");
     const [diskRequestInput, setDiskRequestInput] = React.useState("");
 
-    const [processedStartPoint, setProcessedStartPoint] = React.useState(0);
-    const [processedEndPoint, setProcessedEndPoint] = React.useState(0);
-    const [processedCurrentPosition, setProcessedCurrentPosition] =
-        React.useState(0);
-    const [diskRequests, setDiskRequests] = React.useState([]);
-
     function step_handler() {
         console.log("step btn clicked");
     }

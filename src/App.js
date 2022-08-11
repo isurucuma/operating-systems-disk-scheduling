@@ -21,7 +21,10 @@ function App() {
                         <SeekCountDisplay seekCount={seekCount} />
                     </Grid>
                     <Grid item xs={5}>
-                        <ButtonHolder setChartData={setChartData} />
+                        <ButtonHolder
+                            setChartData={setChartData}
+                            setSeekCount={setSeekCount}
+                        />
                     </Grid>
                 </Grid>
             </Box>

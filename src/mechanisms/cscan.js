@@ -1,5 +1,5 @@
 let size = 8;
-let disk_size = 200;
+let disk_size = 199;
 
 export default function CSCAN(arr, head) {
     let seek_count = 0;
