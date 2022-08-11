@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import { Chart as ChartJS } from "chart.js/auto";
+import LineChart from "./components/LineChart";
+import ButtonHolder from "./components/ButtonHolder";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [chartData, setChartData] = useState({});
+    return (
+        <Container maxWidth="lg">
+            <Box sx={{ flexGrow: 1 }}>
+                <Grid container spacing={4}>
+                    <Grid item xs={7}>
+                        <LineChart chartData={chartData} />
+                    </Grid>
+                    <Grid item xs={5}>
+                        <ButtonHolder setChartData={setChartData} />
+                    </Grid>
+                </Grid>
+            </Box>
+        </Container>
+    );
 }
 
 export default App;
