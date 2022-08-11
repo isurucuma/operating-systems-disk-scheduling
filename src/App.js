@@ -13,11 +13,11 @@ function App() {
         <Container maxWidth="lg">
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={4}>
-                    <Grid item xs={7}>
-                        <LineChart chartData={chartData} />
-                    </Grid>
                     <Grid item xs={5}>
                         <ButtonHolder setChartData={setChartData} />
+                    </Grid>
+                    <Grid item xs={7}>
+                        <LineChart chartData={chartData} />
                     </Grid>
                 </Grid>
             </Box>
