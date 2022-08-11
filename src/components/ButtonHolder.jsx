@@ -75,6 +75,8 @@ export default function ButtonHolder({ setChartData }) {
         }
         if (mechanism === "SCAN") {
             console.log("SCAN");
+            let { seek_count, arr } = SCAN(req_array, Number(diskCurrentPosition), "right");
+            update_chart(seek_count, arr);
         }
         if (mechanism === "SSTF") {
             console.log("SSTF");

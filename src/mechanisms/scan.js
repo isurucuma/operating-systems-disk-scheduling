@@ -1,7 +1,7 @@
 let size = 8;
 let disk_size = 200;
 
-function SCAN(arr, head, direction) {
+export default function SCAN(arr, head, direction) {
     let seek_count = 0;
     let distance, cur_track;
     let left = [],
@@ -69,18 +69,23 @@ function SCAN(arr, head, direction) {
         }
     }
 
+    arr = seek_sequence;
+    console.log(arr)
+    console.log(seek_count)
+
+    return { seek_count, arr };
+
     // document.write("Total number of seek operations = " + seek_count + "</br>");
     // document.write("Seek Sequence is" + "</br>");
     // for (let i = 0; i < seek_sequence.length; i++) {
     //     document.write(seek_sequence[i] + "</br>");
     // }
-    return { seek_count, seek_sequence };
 }
 
 // request array
 
-let arr = [176, 79, 34, 60, 92, 11, 41, 114];
-let head = 50;
-let direction = "left";
+// let arr = [176, 79, 34, 60, 92, 11, 41, 114];
+// let head = 50;
+// let direction = "left";
 
-SCAN(arr, head, direction);
+// SCAN(arr, head, direction);
