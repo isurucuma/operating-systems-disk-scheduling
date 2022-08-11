@@ -84,9 +84,13 @@ export default function ButtonHolder({ setChartData }) {
 
         if (mechanism === "CSCAN") {
             console.log("CSCAN");
+            let { seek_count, arr } = CSCAN(req_array, Number(diskCurrentPosition));
+            update_chart(seek_count, arr);
         }
         if (mechanism === "CLOOK") {
             console.log("CLOOK");
+            let { seek_count, arr } = CLOOK(req_array, Number(diskCurrentPosition));
+            update_chart(seek_count, arr);
         }
     }
 

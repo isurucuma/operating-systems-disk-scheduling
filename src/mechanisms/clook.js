@@ -4,7 +4,7 @@ let size = 8;
 
 // Function to perform C-LOOK on the request
 // array starting from the given head
-function CLOOK(arr, head) {
+export default function CLOOK(arr, head) {
     let seek_count = 0;
     let distance, cur_track;
 
@@ -75,21 +75,29 @@ function CLOOK(arr, head) {
         head = cur_track;
     }
 
-    document.write(
-        "Total number of seek " + "operations = " + seek_count + "</br>"
-    );
+    // console.log(
+    //     "Total number of seek " + "operations = " + seek_count + "</br>"
+    // );
 
-    document.write("Seek Sequence is" + "</br>");
+    // console.log("Seek Sequence is" + "</br>");
 
-    for (let i = 0; i < seek_sequence.length; i++) {
-        document.write(seek_sequence[i] + "</br>");
-    }
+    // for (let i = 0; i < seek_sequence.length; i++) {
+    //     console.log(seek_sequence[i] + "</br>");
+    // }
+
+    // console.log(seek_sequence)
+    // console.log("\n");
+    // console.log(seek_count)
+
+    arr = seek_sequence;
+
+    return { seek_count, arr };
 }
 
 // Request array
-let arr = [176, 79, 34, 60, 92, 11, 41, 114];
-let head = 50;
+// let arr = [176, 79, 34, 60, 92, 11, 41, 114];
+// let head = 50;
 
-document.write("Initial position of head: " + head + "</br>");
+// console.log("Initial position of head: " + head + "</br>");
 
-CLOOK(arr, head);
+// CLOOK(arr, head);

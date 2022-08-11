@@ -1,7 +1,7 @@
 let size = 8;
 let disk_size = 200;
 
-function CSCAN(arr, head) {
+export default function CSCAN(arr, head) {
     let seek_count = 0;
     let distance, cur_track;
     let left = [],
@@ -75,18 +75,22 @@ function CSCAN(arr, head) {
         head = cur_track;
     }
 
-    document.write("Total number of seek operations = " + seek_count + "</br>");
-    document.write("Seek Sequence is" + "</br>");
-    for (let i = 0; i < seek_sequence.length; i++) {
-        document.write(seek_sequence[i] + "</br>");
-    }
+    // document.write("Total number of seek operations = " + seek_count + "</br>");
+    // document.write("Seek Sequence is" + "</br>");
+    // for (let i = 0; i < seek_sequence.length; i++) {
+    //     document.write(seek_sequence[i] + "</br>");
+    // }
+
+    arr = seek_sequence;
+
+    return { seek_count, arr };
 }
 
-// request array
-let arr = [176, 79, 34, 60, 92, 11, 41, 114];
-let head = 50;
+// // request array
+// let arr = [176, 79, 34, 60, 92, 11, 41, 114];
+// let head = 50;
 
-document.write("Initial position of head: " + head + "</br>");
-CSCAN(arr, head);
+// document.write("Initial position of head: " + head + "</br>");
+// CSCAN(arr, head);
 
 // This code is contributed by mukesh07.
