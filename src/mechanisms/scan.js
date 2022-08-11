@@ -1,5 +1,5 @@
 let size = 8;
-let disk_size = 200;
+let disk_size = 199;
 
 export default function SCAN(arr, head, direction) {
     let seek_count = 0;
@@ -70,8 +70,8 @@ export default function SCAN(arr, head, direction) {
     }
 
     arr = seek_sequence;
-    console.log(arr)
-    console.log(seek_count)
+    console.log(arr);
+    console.log(seek_count);
 
     return { seek_count, arr };
 
