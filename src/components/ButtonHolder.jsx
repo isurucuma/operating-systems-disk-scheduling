@@ -30,7 +30,7 @@ import CLOOK from "../mechanisms/clook";
 };
 */
 
-export default function ButtonHolder({ setChartData }) {
+export default function ButtonHolder({ setChartData, setSeekCount }) {
     const [mechanism, setMechanism] = React.useState("");
 
     // for inputs
@@ -53,6 +53,7 @@ export default function ButtonHolder({ setChartData }) {
         let labels = [...Array(arr.length + 1).keys()];
         arr = [Number(diskCurrentPosition), ...arr];
         setChartData({ labels, arr });
+        setSeekCount(seek_count);
     }
 
     function run_handler() {
@@ -75,23 +76,36 @@ export default function ButtonHolder({ setChartData }) {
         }
         if (mechanism === "SCAN") {
             console.log("SCAN");
-            let { seek_count, arr } = SCAN(req_array, Number(diskCurrentPosition), "right");
+            let { seek_count, arr } = SCAN(
+                req_array,
+                Number(diskCurrentPosition),
+                "right"
+            );
             update_chart(seek_count, arr);
         }
         if (mechanism === "SSTF") {
             console.log("SSTF");
-            let { seek_count, arr } = SSTF(req_array, Number(diskCurrentPosition));
+            let { seek_count, arr } = SSTF(
+                req_array,
+                Number(diskCurrentPosition)
+            );
             update_chart(seek_count, arr);
         }
 
         if (mechanism === "CSCAN") {
             console.log("CSCAN");
-            let { seek_count, arr } = CSCAN(req_array, Number(diskCurrentPosition));
+            let { seek_count, arr } = CSCAN(
+                req_array,
+                Number(diskCurrentPosition)
+            );
             update_chart(seek_count, arr);
         }
         if (mechanism === "CLOOK") {
             console.log("CLOOK");
-            let { seek_count, arr } = CLOOK(req_array, Number(diskCurrentPosition));
+            let { seek_count, arr } = CLOOK(
+                req_array,
+                Number(diskCurrentPosition)
+            );
             update_chart(seek_count, arr);
         }
     }
