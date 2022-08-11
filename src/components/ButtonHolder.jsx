@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import SelectMechanism from "./SelectMechanism";
+import SelectDirection from "./SelectDirection";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 
@@ -32,6 +33,7 @@ import CLOOK from "../mechanisms/clook";
 
 export default function ButtonHolder({ setChartData, setSeekCount }) {
     const [mechanism, setMechanism] = React.useState("");
+    const [direction, setDirection] = React.useState("");
 
     // for inputs
     const [diskStartPoint, setDiskStartPoint] = React.useState("");
@@ -173,6 +175,12 @@ export default function ButtonHolder({ setChartData, setSeekCount }) {
                             setDiskRequestInput(e.target.value);
                         }}
                     />
+                    {mechanism === "SCAN" ? (
+                        <SelectDirection
+                            direction={direction}
+                            setDirection={setDirection}
+                        />
+                    ) : null}
                 </Box>
             </CardContent>
             <CardActions>

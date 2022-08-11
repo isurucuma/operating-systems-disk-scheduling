@@ -11,8 +11,8 @@ export default function SCAN(arr, head, direction) {
     // appending end values
     // which has to be visited
     // before reversing the direction
-    if (direction == "left") left.push(0);
-    else if (direction == "right") right.push(disk_size - 1);
+    if (direction === "left") left.push(0);
+    else if (direction === "right") right.push(disk_size - 1);
 
     for (let i = 0; i < size; i++) {
         if (arr[i] < head) left.push(arr[i]);
@@ -32,7 +32,7 @@ export default function SCAN(arr, head, direction) {
     // and left of the head
     let run = 2;
     while (run-- > 0) {
-        if (direction == "left") {
+        if (direction === "left") {
             for (let i = left.length - 1; i >= 0; i--) {
                 cur_track = left[i];
 
@@ -49,7 +49,7 @@ export default function SCAN(arr, head, direction) {
                 head = cur_track;
             }
             direction = "right";
-        } else if (direction == "right") {
+        } else if (direction === "right") {
             for (let i = 0; i < right.length; i++) {
                 cur_track = right[i];
 
