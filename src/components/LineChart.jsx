@@ -9,7 +9,7 @@ export default function LineChart({ chartData }) {
                 label: "Disk Scheduling",
                 fill: false,
                 lineTension: 0,
-                backgroundColor: "rgba(40,30,192,0.4)",
+                backgroundColor: "rgba(204,0,102,0.8)",
                 data: [],
             },
         ],
@@ -28,14 +28,23 @@ export default function LineChart({ chartData }) {
                     indexAxis: "y",
                     scales: {
                         x: {
-                            suggestedMax: 200,
+                            suggestedMax: 100,
                             suggestedMin: 0,
                             grid: {
                                 display: false,
                             },
+                            title: {
+                                text: "Disk Position",
+                                display: true,
+                            },
                         },
+
                         y: {
                             grid: { display: false },
+                            title: {
+                                text: "Request ID",
+                                display: true,
+                            },
                         },
                     },
                 }}
