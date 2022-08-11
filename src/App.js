@@ -17,6 +17,7 @@ function App() {
         <div className="outerContainer">
             <div>
                 <h1 className="topic">Disk Scheduling Algorithm</h1>
+                {/* <h2 className="subTopic" >Group 02</h2> */}
             </div>
             <Container maxWidth="">
 

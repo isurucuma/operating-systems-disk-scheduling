@@ -104,6 +104,10 @@ export default function ButtonHolder({ setChartData, setSeekCount }) {
 
     function clear_handler() {
         console.log("clear btn clicked");
+        setDiskStartPoint();
+        setDiskEndPoint();
+        setDiskCurrentPosition();
+        setDiskRequestInput()
     }
 
     return (
@@ -174,9 +178,9 @@ export default function ButtonHolder({ setChartData, setSeekCount }) {
                 </Box>
             </CardContent>
             <CardActions>
-                <Button onClick={step_handler} size="small">
+                {/* <Button onClick={step_handler} size="small">
                     Step
-                </Button>
+                </Button> */}
                 <Button onClick={run_handler} size="small">
                     Run all
                 </Button>
