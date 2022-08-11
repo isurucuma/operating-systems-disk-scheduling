@@ -21,7 +21,7 @@ export default function LineChart({ chartData }) {
     data.datasets[0].data = arr;
 
     return (
-        <div>
+        <div className="graph">
             <Line
                 data={data}
                 options={{

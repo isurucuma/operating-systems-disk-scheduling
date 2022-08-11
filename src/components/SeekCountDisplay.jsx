@@ -7,8 +7,10 @@ export default function SeekCountDisplay({ seekCount }) {
     return (
         <Card
             sx={{
-                minWidth: 275,
-                margin: 5,
+                minWidth: 844,
+                padding: 0,
+                marginTop: 1,
+                boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
             }}
         >
             <CardContent>

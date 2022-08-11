@@ -14,20 +14,26 @@ function App() {
     const [chartData, setChartData] = useState({ labels: null, arr: null });
     const [seekCount, setSeekCount] = useState(0);
     return (
-        <Container maxWidth="" className="outerContainer">
-            <h1 margin="normal" className="topic">Disk Scheduling Algorithm</h1>
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid container spacing={4}>
-                    <Grid item xs={7}>
-                        <LineChart chartData={chartData} />
-                        <SeekCountDisplay seekCount={seekCount} />
+        <div className="outerContainer">
+            <div>
+                <h1 className="topic">Disk Scheduling Algorithm</h1>
+            </div>
+            <Container maxWidth="">
+
+                <Box sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={4}>
+                        <Grid item xs={5}>
+                            <ButtonHolder setChartData={setChartData} setSeekCount={setSeekCount} />
+                        </Grid>
+                        <Grid item xs={7}>
+                            <LineChart chartData={chartData} />
+                            <SeekCountDisplay seekCount={seekCount} />
+                        </Grid>
                     </Grid>
-                    <Grid item xs={5}>
-                        <ButtonHolder setChartData={setChartData} />
-                    </Grid>
-                </Grid>
-            </Box>
-        </Container>
+                </Box>
+            </Container>
+        </div>
+
     );
 }
 
