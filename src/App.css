@@ -1,3 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 app {
     display: flex;
+}
+
+.topic{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.outerContainer{
+    background-image: url('./images/background.jpg');
+    margin: 0px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
