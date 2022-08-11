@@ -1,5 +1,6 @@
 var arr = [53, 98, 183, 37, 122, 14, 124, 65, 67];
-
+let a = [];
+let b = [];
 //shortest seek time first
 function sstf(arr) {
     var headFirst = arr[0];

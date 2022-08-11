@@ -19,8 +19,8 @@ export default function FCFS(arr, head) {
     return { seek_count, arr };
 }
 
-// request array
-let arr = [176, 79, 34, 60, 92, 11, 41, 114];
-let head = 50;
+// // request array
+// let arr = [176, 79, 34, 60, 92, 11, 41, 114];
+// let head = 50;
 
-console.log(FCFS(arr, head));
+// console.log(FCFS(arr, head));

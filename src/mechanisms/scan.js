@@ -69,11 +69,12 @@ function SCAN(arr, head, direction) {
         }
     }
 
-    document.write("Total number of seek operations = " + seek_count + "</br>");
-    document.write("Seek Sequence is" + "</br>");
-    for (let i = 0; i < seek_sequence.length; i++) {
-        document.write(seek_sequence[i] + "</br>");
-    }
+    // document.write("Total number of seek operations = " + seek_count + "</br>");
+    // document.write("Seek Sequence is" + "</br>");
+    // for (let i = 0; i < seek_sequence.length; i++) {
+    //     document.write(seek_sequence[i] + "</br>");
+    // }
+    return { seek_count, seek_sequence };
 }
 
 // request array

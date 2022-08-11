@@ -10,6 +10,10 @@ import Box from "@mui/material/Box";
 
 import { validate_inputs } from "../utils/util_functions";
 import FCFS from "../mechanisms/fcfs";
+import SSTF from "../mechanisms/sstf";
+import SCAN from "../mechanisms/scan";
+import CSCAN from "../mechanisms/cscan";
+import CLOOK from "../mechanisms/clook";
 
 /*
     const data = {
@@ -45,33 +49,13 @@ export default function ButtonHolder({ setChartData }) {
         console.log("step btn clicked");
     }
 
+    function update_chart(seek_count, arr) {
+        let labels = [...Array(arr.length + 1).keys()];
+        arr = [Number(diskCurrentPosition), ...arr];
+        setChartData({ labels, arr });
+    }
+
     function run_handler() {
-        //     try {
-        //         let {
-        //             diskStartPointProcessed,
-        //             diskEndPointProcessed,
-        //             diskCurrentPositionProcessed,
-        //             diskRequestInputProcessed,
-        //         } = validate_inputs(
-        //             diskStartPoint,
-        //             diskEndPoint,
-        //             diskCurrentPosition,
-        //             diskRequestInput
-        //         );
-        //         setProcessedStartPoint(diskStartPointProcessed);
-        //         setProcessedEndPoint(diskEndPointProcessed);
-        //         setProcessedCurrentPosition(diskCurrentPositionProcessed);
-        //         setDiskRequests(diskRequestInputProcessed);
-        //     } catch (e) {
-        //         console.log(e);
-        //     }
-
-        //     console.log(processedStartPoint);
-        //     console.log(processedEndPoint);
-        //     console.log(processedCurrentPosition);
-        //     console.log(diskRequests);
-        // }
-
         console.log(Number(diskStartPoint));
         console.log(Number(diskEndPoint));
         console.log(Number(diskCurrentPosition));
@@ -87,14 +71,15 @@ export default function ButtonHolder({ setChartData }) {
                 req_array,
                 Number(diskCurrentPosition)
             );
-            console.log({ seek_count, arr });
-        }
-        if (mechanism === "SSTF") {
-            console.log("SSTF");
+            update_chart(seek_count, arr);
         }
         if (mechanism === "SCAN") {
             console.log("SCAN");
         }
+        if (mechanism === "SSTF") {
+            console.log("SSTF");
+        }
+
         if (mechanism === "CSCAN") {
             console.log("CSCAN");
         }

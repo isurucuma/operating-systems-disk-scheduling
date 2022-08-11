@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 function App() {
-    const [chartData, setChartData] = useState({});
+    const [chartData, setChartData] = useState({ labels: null, arr: null });
     return (
         <Container maxWidth="lg">
             <Box sx={{ flexGrow: 1 }}>
